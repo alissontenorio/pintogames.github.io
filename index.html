@@ -367,6 +367,17 @@
       margin-top: 0.75rem;
       font-weight: 500;
     }
+
+    .usuario-bemvindo {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .usuario-bemvindo:empty {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -380,6 +391,7 @@
       <div class="brand">
         <p class="tagline">Jogos retro</p>
         <p class="sub">Seu cantinho nostálgico</p>
+        <p id="usuario-bemvindo" class="usuario-bemvindo" aria-live="polite"></p>
       </div>
       <div class="pixel-bar" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span>
@@ -508,5 +520,22 @@
       <p class="author">Alisson Tenório Pinto</p>
     </footer>
   </main>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var codigo = params.get('usuario');
+      var el = document.getElementById('usuario-bemvindo');
+      if (!codigo || !el) return;
+
+      fetch('assets/usuarios.json')
+        .then(function(r) { return r.json(); })
+        .then(function(usuarios) {
+          var nome = usuarios[codigo];
+          if (nome) el.textContent = 'Olá, ' + nome + '!';
+        })
+        .catch(function() {});
+    })();
+  </script>
 </body>
 </html>
