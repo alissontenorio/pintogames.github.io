@@ -1,0 +1,3 @@
+Coloque a logo da loja neste pasta com o nome: logo.png
+
+Assim a página principal (index.html) exibirá sua logo corretamente.

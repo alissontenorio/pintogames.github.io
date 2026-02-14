@@ -1,0 +1,14 @@
+Coloque aqui uma foto de cada console com estes nomes exatos:
+
+- sega-master-system.jpg
+- sega-mega-drive.jpg
+- super-nintendo.jpg
+- game-boy.jpg
+- game-boy-pocket.jpg
+- game-boy-color.jpg
+- game-boy-advance.jpg
+- playstation.jpg
+- sega-saturn.jpg
+
+Formato: JPG ou PNG (use .jpg ou .png no HTML se usar PNG).
+Tamanho sugerido: por volta de 200x150 px ou maior (o site redimensiona).
